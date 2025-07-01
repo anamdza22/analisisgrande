@@ -7,10 +7,9 @@ import seaborn as sns
 st.set_page_config(layout="wide")
 st.title("Dashboard de Salud y Estilo de Vida")
 
-# --- Cargar los datos desde GitHub ---
-# Reemplaza este link por tu enlace RAW del archivo CSV en GitHub
-csv_url = "https://raw.githubusercontent.com/usuario/repositorio/ruta/CopiaAnalisisDatosGrande.csv"
-df = pd.read_csv(csv_url)
+# --- Cargar los datos desde el mismo directorio ---
+df = pd.read_csv("CopiaAnalisisDatosGrande.csv")
+
 
 # Renombrar columnas para facilidad si es necesario
 df.columns = df.columns.str.strip()  # Elimina espacios extra
